@@ -38,6 +38,7 @@ namespace WebMvc.Areas.Admin.Controllers
             return View(model);
         }
 
+        //Logout page administrator
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
