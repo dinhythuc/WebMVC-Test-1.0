@@ -1,0 +1,117 @@
+﻿@model Models.Framework.DB_Students
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DB_Students</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Code)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Code)
+            @Html.ValidationMessageFor(model => model.Student_Code)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Name)
+            @Html.ValidationMessageFor(model => model.Student_Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Class)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Class)
+            @Html.ValidationMessageFor(model => model.Student_Class)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Point)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Point)
+            @Html.ValidationMessageFor(model => model.Student_Point)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Comment)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Comment)
+            @Html.ValidationMessageFor(model => model.Student_Comment)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Status)
+            @Html.ValidationMessageFor(model => model.Student_Status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Address)
+            @Html.ValidationMessageFor(model => model.Student_Address)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Born)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Born)
+            @Html.ValidationMessageFor(model => model.Student_Born)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_BirthDay)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_BirthDay)
+            @Html.ValidationMessageFor(model => model.Student_BirthDay)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Parents)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Parents)
+            @Html.ValidationMessageFor(model => model.Student_Parents)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Student_Image)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Student_Image)
+            @Html.ValidationMessageFor(model => model.Student_Image)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

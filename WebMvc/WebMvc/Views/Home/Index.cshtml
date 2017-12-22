@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebMvc.Models.Student>
+@*@{
+    var date = DateTime.Now.ToShortDateString();
+    string message = "Wellcome";
+    <text>Today's date is:</text>@date<br />
+    @message  
+}
+
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+    @DateTime.Now.Year @:is a leap year.
+}
+else{
+    @DateTime.Now.Year @:is not leap year.
+}
+
+@for (int i = 0; i < 5; i++)
+{
+    @i.ToString()<br />
+}*@
+
+
+ <div style="margin-left: 5.5%" class="container">
+     <table class="w3-table w3-striped w3-bordered " style="width: 50%">
+            <tr>
+                <th>@Html.DisplayNameFor(model=> model.StudentName)</th>
+                <th>@Html.DisplayNameFor(model=> model.Age)</th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+             <tr>
+                 <td>@Html.DisplayFor(modelitem=>item.StudentName)</td>
+                 <td>@Html.DisplayFor(modelitem=>item.Age)</td>
+                 <td>
+                     <a href="~/Home/Edit?StudentID=@item.StudentID" class="btn btn-primary">Edit</a>|
+                     @Html.ActionLink("Details", "Details", new {id = item.StudentID})|
+                     @Html.ActionLink("Delete", "Delete", new {id = item.StudentID})
+                 </td>
+             </tr>
+            }
+        </table>
+ </div>
+        
+
+@*<ul>
+    @foreach(var std in ViewData["Students"] as IList<WebMvc.Models.Student>)
+    {
+        <li>
+            @std.StudentName
+        </li>
+        
+    }
+</ul>*@

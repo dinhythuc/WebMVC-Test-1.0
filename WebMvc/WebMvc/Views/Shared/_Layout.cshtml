@@ -1,0 +1,43 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Assets/Custom/bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Assets/Custom/bootstrap/css/w3.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Assets/Custom/bootstrap/css/StyleWeb.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Assets/Custom/bootstrap/css/bootstrapweb.css" rel="stylesheet" type="text/css"/>
+    <title>Web</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+        @RenderPage("_HeaderNavbar.cshtml")
+        @{
+            Html.RenderPartial("_LeftMenu");
+        }
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @RenderPage("_Footer.cshtml")
+    </div>
+
+@*<script>
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0px"
+        } else {
+            document.getElementById("navbar").style.top = "0px";
+        }
+    }
+</script>*@
+</body>
+</html>

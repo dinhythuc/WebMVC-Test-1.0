@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <meta property="fb:app_id" content="235682883225736" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@nuget">
+
+    <meta property="og:title" content="NuGet.VisualStudio 4.5.0" />
+    <meta property="og:type" content="nugetgallery:package" />
+    <meta property="og:url" content="https://nuget.org/packages/NuGet.VisualStudio/" />
+    <meta property="og:description" content="APIs for invoking NuGet services in Visual Studio." />
+    <meta property="og:determiner" content="a" />
+    <meta property="og:image" content="https://nuget.org/Content/gallery/img/default-package-icon-256x256.png" />
+
+    
+
+
+    <title>     
+        NuGet Gallery
+        | NuGet.VisualStudio 4.5.0
+    </title>
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link title="NuGet.org" type="application/opensearchdescription+xml" href="/opensearch.xml" rel="search">
+
+    <link href="/Content/gallery/css/site.min.css?v=HTPDAGl5XMIoGc-JXcoNWOPnvS0pIig7zySFTuM0U6A1" rel="stylesheet"/>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+
+                    <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', 'UA-100515088-1', 'auto');
+                    ga('send', 'pageview');
+                </script>
+
+    
+    
+                <!-- Telemetry -->
+            <script type="text/javascript">
+                var appInsights = window.appInsights || function (config) {
+                    function s(config) {
+                        t[config] = function () {
+                            var i = arguments;
+                            t.queue.push(function () { t[config].apply(t, i) })
+                        }
+                    }
+
+                    var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u;
+                    for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop());
+                    return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) {
+                        var s = u && u(config, r, f, e, o);
+                        return s !== !0 && t["_" + i](config, r, f, e, o), s
+                    }), t
+                }({
+                    instrumentationKey: 'df3a36b9-dfba-401c-82ab-35690083be3e',
+                    samplingPercentage: 100
+                });
+
+                window.appInsights = appInsights;
+                appInsights.trackPageView();
+            </script>
+
+</head>
+<body>
+    
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href="#skippedToContent" class="showOnFocus" title="Skip To Content" role="navigation">Skip To Content</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/"><img class="navbar-logo" width="94" height="29" alt="NuGet home"
+                                               src="/Content/gallery/img/logo-header.svg"
+                                                   onerror="this.src='https://nuget.org/Content/gallery/img/logo-header-94x29.png'; this.onerror = null;"
+ /></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" role="menubar">
+                    <ul class="nav navbar-nav" role="menu">
+                            <li class="active"
+        aria-selected="true" role="presentation">
+        <a role="menuitem" href="/packages">
+            <span>Packages</span>
+        </a>
+    </li>
+
+                            <li class=""
+        aria-selected="false" role="presentation">
+        <a role="menuitem" href="/packages/manage/upload">
+            <span>Upload</span>
+        </a>
+    </li>
+
+    <li class=""
+        aria-selected="false" role="presentation">
+        <a role="menuitem" href="/stats">
+            <span>Statistics</span>
+        </a>
+    </li>
+                                                    <li class=""
+        aria-selected="false" role="presentation">
+        <a role="menuitem" href="https://docs.microsoft.com/en-us/nuget/">
+            <span>Documentation</span>
+        </a>
+    </li>
+
+                            <li class=""
+        aria-selected="false" role="presentation">
+        <a role="menuitem" href="/downloads">
+            <span>Downloads</span>
+        </a>
+    </li>
+
+                            <li class=""
+        aria-selected="false" role="presentation">
+        <a role="menuitem" href="http://blog.nuget.org/">
+            <span>Blog</span>
+        </a>
+    </li>
+
+                    </ul>
+                        <ul class="nav navbar-nav navbar-right navbar-seperated" role="menu">
+    <li class=""
+        aria-selected="false" role="presentation">
+        <a role="menuitem" href="/users/account/LogOn?returnUrl=%2Fpackages%2FNuGet.VisualStudio%2F4.5.0" title="Sign in to an existing NuGet.org account">
+            <span>Sign in</span>
+        </a>
+    </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container search-container">
+            <div class="row">
+                <form class="col-sm-12" action="/packages" method="get">
+                    <div class="input-group">
+    <input name="q" type="text" class="form-control" id="search"
+           placeholder="Search for packages..." autocomplete="off"
+           value=""
+            />
+    <span class="input-group-btn">
+        <button class="btn btn-default btn-warning btn-search" type="submit"
+                title="Search for packages" aria-label="Search">
+            <span class="ms-Icon ms-Icon--Search" aria-hidden="true"></span>
+        </button>
+    </span>
+</div>
+                </form>
+            </div>
+        </div>
+</nav>
+
+
+    <div id="skippedToContent">
+    
+
+
+
+
+<section role="main" class="container main-container page-package-details">
+    <div class="row">
+        <aside class="col-sm-1">
+            <h3>
+                <img class="package-icon img-responsive" aria-hidden="true" alt=""
+                     src="https://nuget.org/Content/gallery/img/default-package-icon.svg"
+                         onerror="this.src='https://nuget.org/Content/gallery/img/default-package-icon-256x256.png'; this.onerror = null;"
+ />
+            </h3>
+        </aside>
+        <article class="col-sm-8 package-details-main">
+            <div class="package-title">
+                <h1>
+                    NuGet.<wbr>VisualStudio
+                    <small class="text-nowrap">4.5.0</small>
+
+                        <img class="reserved-indicator"
+                             src="/Content/gallery/img/reserved-indicator.svg"
+                                 onerror="this.src='https://nuget.org/Content/gallery/img/reserved-indicator-25x25.png'; this.onerror = null;"
+
+                             title="The ID prefix of this package has been reserved for one of the owners of this package by NuGet.org." />
+                </h1>
+
+            </div>
+
+                <p>APIs for invoking NuGet services in Visual Studio.</p>
+
+
+
+
+
+
+
+
+
+
+                <div class="install-tabs">
+                    <ul class="nav nav-tabs" role="tablist">
+
+    <li role="presentation" class="active">
+        <a href="#package-manager" aria-expanded="true"
+           aria-selected="true"
+           aria-controls="package-manager" role="tab" data-toggle="tab"
+           title="Switch to tab panel which contains package installation command for Package Manager">
+            Package Manager
+        </a>
+    </li>
+    <li role="presentation" class="">
+        <a href="#dotnet-cli" aria-expanded="false"
+           aria-selected="false"
+           aria-controls="dotnet-cli" role="tab" data-toggle="tab"
+           title="Switch to tab panel which contains package installation command for .NET CLI">
+            .NET CLI
+        </a>
+    </li>
+    <li role="presentation" class="">
+        <a href="#paket-cli" aria-expanded="false"
+           aria-selected="false"
+           aria-controls="paket-cli" role="tab" data-toggle="tab"
+           title="Switch to tab panel which contains package installation command for Paket CLI">
+            Paket CLI
+        </a>
+    </li>
+                    </ul>
+                    <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane active" id="package-manager">
+        <div>
+            <div class="install-script" id="package-manager-text">
+                <span>
+                    Install-Package NuGet.VisualStudio -Version 4.5.0
+                </span>
+            </div>
+            <div class="copy-button">
+                <button id="package-manager-button" class="btn btn-default btn-warning" type="button"
+                        data-toggle="popover" data-placement="bottom" data-content="Copied."
+                        aria-label="Copy the Package Manager command">
+                    <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane " id="dotnet-cli">
+        <div>
+            <div class="install-script" id="dotnet-cli-text">
+                <span>
+                    dotnet add package NuGet.VisualStudio --version 4.5.0
+                </span>
+            </div>
+            <div class="copy-button">
+                <button id="dotnet-cli-button" class="btn btn-default btn-warning" type="button"
+                        data-toggle="popover" data-placement="bottom" data-content="Copied."
+                        aria-label="Copy the .NET CLI command">
+                    <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane " id="paket-cli">
+        <div>
+            <div class="install-script" id="paket-cli-text">
+                <span>
+                    paket add NuGet.VisualStudio --version 4.5.0
+                </span>
+            </div>
+            <div class="copy-button">
+                <button id="paket-cli-button" class="btn btn-default btn-warning" type="button"
+                        data-toggle="popover" data-placement="bottom" data-content="Copied."
+                        aria-label="Copy the Paket CLI command">
+                    <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    <div class="icon-text alert alert-warning" >
+        <i class="ms-Icon ms-Icon--Warning" aria-hidden="true"></i>
+        
+                    The NuGet Team does not provide support for this client.
+                    Please contact its <a href="https://fsprojects.github.io/Paket/contact.html">maintainers</a> for support.
+                
+    </div>
+    </div>
+                    </div>
+                </div>
+
+                    <h2>
+                        <a href="#" role="button" data-toggle="collapse" data-target="#dependency-groups"
+                           aria-expanded="false" aria-controls="dependency-groups"
+                           id="show-dependency-groups">
+                            <i class="ms-Icon ms-Icon--ChevronRight"
+                               aria-hidden="true"></i>
+                            <span>Dependencies</span>
+                        </a>
+                    </h2>
+                        <ul class="list-unstyled panel-collapse collapse dependency-groups" id="dependency-groups">
+                                <li>
+                                        <h4><span>.NETFramework 4.6</span></h4>
+                                    <ul class="list-unstyled dependency-group">
+                                            <li>
+                                                    <a href="/packages/EnvDTE80/">EnvDTE80</a>
+                                                    <span>(&gt;= 8.0.1)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/Microsoft.VisualStudio.Shell.Interop.12.0/">Microsoft.VisualStudio.Shell.Interop.12.0</a>
+                                                    <span>(&gt;= 12.0.30110)</span>
+                                            </li>
+                                            <li>
+                                                    <a href="/packages/VSSDK.TemplateWizardInterface/">VSSDK.TemplateWizardInterface</a>
+                                                    <span>(&gt;= 12.0.4)</span>
+                                            </li>
+                                    </ul>
+                                </li>
+                        </ul>
+
+            <h2>
+                <a href="#" role="button" data-toggle="collapse" data-target="#version-history"
+                   aria-expanded="true" aria-controls="version-history" id="show-version-history">
+                    <i class="ms-Icon ms-Icon--ChevronDown" aria-hidden="true"></i>
+                    <span>Version History</span>
+                </a>
+            </h2>
+            <div class="version-history panel-collapse collapse in" aria-expanded="true" id="version-history">
+                <table class="table borderless">
+                    <thead>
+                        <tr>
+                            <th>Version</th>
+                            <th>Downloads</th>
+                            <th>Last updated</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border">
+
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.5.0">
+                                                <b>
+                                                    4.5.0
+                                                        (current version)
+                                                </b>
+                                            </a>
+                                    </td>
+                                    <td>
+                                        1,304
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-12-04T22:49:03.2200000">12/4/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.5.0-rtm-4651">
+                                                4.5.0-rtm-4651
+                                            </a>
+                                    </td>
+                                    <td>
+                                        26
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-12-04T23:07:55.2700000">12/4/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.4.0">
+                                                4.4.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        4,574
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-10-10T23:43:45.5430000">10/10/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.4.0-preview3-4475">
+                                                4.4.0-preview3-4475
+                                            </a>
+                                    </td>
+                                    <td>
+                                        41
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-10-10T23:44:25.5000000">10/10/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.3.0">
+                                                4.3.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        6,269
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-08-11T18:24:57.0030000">8/11/2017</span>
+                                    </td>
+                                </tr>
+        </tbody><tbody class="no-border collapse " id="hidden-versions">
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.3.0-rtm-4324">
+                                                4.3.0-rtm-4324
+                                            </a>
+                                    </td>
+                                    <td>
+                                        76
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-08-11T18:14:52.8600000">8/11/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.3.0-preview4">
+                                                4.3.0-preview4
+                                            </a>
+                                    </td>
+                                    <td>
+                                        290
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-07-14T23:22:47.3670000">7/14/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.3.0-preview3-4168">
+                                                4.3.0-preview3-4168
+                                            </a>
+                                    </td>
+                                    <td>
+                                        593
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-06-27T21:49:44.0130000">6/27/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.3.0-beta1-2418">
+                                                4.3.0-beta1-2418
+                                            </a>
+                                    </td>
+                                    <td>
+                                        487
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-05-09T22:33:45.7670000">5/9/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.2.0">
+                                                4.2.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        2,506
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-07-14T23:13:07.4770000">7/14/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.1.0">
+                                                4.1.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        141
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-07-14T23:01:52.0800000">7/14/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.0.0">
+                                                4.0.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        16,466
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-03-07T01:50:24.2770000">3/7/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.0.0-rtm-2265">
+                                                4.0.0-rtm-2265
+                                            </a>
+                                    </td>
+                                    <td>
+                                        26,446
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-02-07T17:48:33.5530000">2/7/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.0.0-rc3">
+                                                4.0.0-rc3
+                                            </a>
+                                    </td>
+                                    <td>
+                                        908
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-01-26T23:02:38.6270000">1/26/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.0.0-rc2">
+                                                4.0.0-rc2
+                                            </a>
+                                    </td>
+                                    <td>
+                                        3,988
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2016-12-14T00:55:35.6670000">12/14/2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/4.0.0-rc-2048">
+                                                4.0.0-rc-2048
+                                            </a>
+                                    </td>
+                                    <td>
+                                        116,971
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2016-11-16T19:15:30.4130000">11/16/2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/3.5.0">
+                                                3.5.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        7,394
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2017-01-18T19:53:04.1430000">1/18/2017</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/3.3.0">
+                                                3.3.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        67,638
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2016-01-14T18:54:40.7800000">1/14/2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.8.6">
+                                                2.8.6
+                                            </a>
+                                    </td>
+                                    <td>
+                                        6,469
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-07-21T19:37:58.7730000">7/21/2015</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.8.5">
+                                                2.8.5
+                                            </a>
+                                    </td>
+                                    <td>
+                                        6,226
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2015-04-02T17:20:57.7070000">4/2/2015</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.8.3">
+                                                2.8.3
+                                            </a>
+                                    </td>
+                                    <td>
+                                        6,722
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2014-10-17T22:11:11.5430000">10/17/2014</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.8.2">
+                                                2.8.2
+                                            </a>
+                                    </td>
+                                    <td>
+                                        4,351
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2014-05-22T21:38:28.7600000">5/22/2014</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.8.2-beta">
+                                                2.8.2-beta
+                                            </a>
+                                    </td>
+                                    <td>
+                                        201
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2014-05-06T23:50:41.7100000">5/6/2014</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.8.1">
+                                                2.8.1
+                                            </a>
+                                    </td>
+                                    <td>
+                                        3,186
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2014-04-02T21:49:10.8770000">4/2/2014</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.7.2">
+                                                2.7.2
+                                            </a>
+                                    </td>
+                                    <td>
+                                        977
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2013-11-11T23:46:50.9100000">11/11/2013</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.7.1">
+                                                2.7.1
+                                            </a>
+                                    </td>
+                                    <td>
+                                        535
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2013-10-07T19:34:10.9170000">10/7/2013</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.7.0">
+                                                2.7.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        466
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2013-08-22T18:42:56.4070000">8/22/2013</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.7.0-alpha">
+                                                2.7.0-alpha
+                                            </a>
+                                    </td>
+                                    <td>
+                                        198
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2013-08-08T19:43:03.7600000">8/8/2013</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.6.0">
+                                                2.6.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        410
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2013-06-26T20:32:59.6930000">6/26/2013</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.5.0">
+                                                2.5.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        539
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2013-04-25T18:50:12.7230000">4/25/2013</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.2.0">
+                                                2.2.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        868
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2012-12-12T23:52:47.9500000">12/12/2012</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <a href="/packages/NuGet.VisualStudio/2.1.0">
+                                                2.1.0
+                                            </a>
+                                    </td>
+                                    <td>
+                                        670
+                                    </td>
+                                    <td>
+                                        <span data-datetime="2012-10-04T23:34:26.0630000">10/4/2012</span>
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                    <a href="#" role="button" data-toggle="collapse" class="icon-link" data-target="#hidden-versions"
+                       aria-expanded="false" aria-controls="hidden-versions" id="show-hidden-versions">
+                        <i class="ms-Icon ms-Icon--CalculatorAddition" aria-hidden="true"></i>
+                        <span>Show more</span>
+                    </a>
+            </div>
+        </article>
+        <aside class="col-sm-3 package-details-info">
+            <h2>Info</h2>
+            <ul class="list-unstyled ms-Icon-ul">
+                <li>
+                    <i class="ms-Icon ms-Icon--History" aria-hidden="true"></i>
+                    last updated <span data-datetime="2017-12-04T22:49:03.2200000">12/4/2017</span>
+                </li>
+                    <li>
+                        <i class="ms-Icon ms-Icon--Globe" aria-hidden="true"></i>
+                        <a href="https://github.com/NuGet/NuGet.Client" data-track="outbound-project-url" title="Visit the project site to learn more about this package" rel="nofollow">
+                                Project Site
+                        </a>
+                    </li>
+                                    <li>
+                        <i class="ms-Icon ms-Icon--Certificate" aria-hidden="true"></i>
+                        <a href="https://raw.githubusercontent.com/NuGet/NuGet.Client/dev/LICENSE.txt" data-track="outbound-license-url" title="Make sure you agree with the license" rel="nofollow">
+                                License Info
+                        </a>
+                    </li>
+                <li>
+                    <i class="ms-Icon ms-Icon--Mail" aria-hidden="true"></i>
+                    <a href="/packages/NuGet.VisualStudio/4.5.0/ContactOwners" title="Ask the package owners a question">Contact owners</a>
+                </li>
+                    <li>
+                        <i class="ms-Icon ms-Icon--Flag" aria-hidden="true"></i>
+                        <a href="/packages/NuGet.VisualStudio/4.5.0/ReportAbuse" title="Report the package as abusive">
+                            Report
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="ms-Icon ms-Icon--CloudDownload" aria-hidden="true"></i>
+                        <a href="https://www.nuget.org/api/v2/package/NuGet.VisualStudio/4.5.0" data-track="outbound-manual-download" title="Download the raw nupkg file." rel="nofollow">Manual download</a>
+                    </li>
+                    <li class="no-clickonce">
+                        <i class="ms-Icon ms-Icon--OpenInNewWindow" aria-hidden="true"></i>
+                        <a href="https://npe.codeplex.com/releases/clickonce/NuGetPackageExplorer.application?url=https://www.nuget.org/api/v2/package/NuGet.VisualStudio/4.5.0/&amp;id=NuGet.VisualStudio&amp;version=4.5.0" title="Explore the nupkg with the NuGet Package Explorer (IE only)" rel="nofollow">Open in Package Explorer</a>
+                    </li>
+
+                                
+
+            </ul>
+
+            <h2>Statistics</h2>
+            <ul class="list-unstyled ms-Icon-ul">
+                <li>
+                    <i class="ms-Icon ms-Icon--Download" aria-hidden="true"></i>
+                    287,936 total downloads
+                </li>
+                <li>
+                    <i class="ms-Icon ms-Icon--Giftbox" aria-hidden="true"></i>
+                    1,304 downloads
+                    of latest version
+                </li>
+                <li>
+                    <i class="ms-Icon ms-Icon--Financial" aria-hidden="true"></i>
+                    151 downloads
+                    per day (avg)
+                </li>
+            </ul>
+                <a href="/stats/packages/NuGet.VisualStudio?groupby=Version" title="Package Statistics">View full stats</a>
+
+            <h2>Owners</h2>
+            <ul class="list-unstyled owner-list">
+            <li>
+            <a href="/profiles/microsoft" title="microsoft"><img src="https://secure.gravatar.com/avatar/08cb1de15b201ab761820bed22b61cb0?s=64&amp;r=g&amp;d=retro" class="owner-image" height="32" title="microsoft" width="32" alt="gravatar" /></a>
+                <a href="/profiles/microsoft" title="microsoft">
+                    microsoft
+                </a>
+            </li>
+            <li>
+            <a href="/profiles/nuget" title="nuget"><img src="https://secure.gravatar.com/avatar/60929cf718b4dd6de66be7739322ab48?s=64&amp;r=g&amp;d=retro" class="owner-image" height="32" title="nuget" width="32" alt="gravatar" /></a>
+                <a href="/profiles/nuget" title="nuget">
+                    nuget
+                </a>
+            </li>
+            </ul>
+
+                    <h2>Authors</h2>
+                    <p>Microsoft</p>
+                    <h2>Copyright</h2>
+                    <p>&#169; Microsoft Corporation. All rights reserved.</p>
+                    <h2>Tags</h2>
+                    <p>
+                            <a href="/packages?q=Tags%3A%22nuget%22" title="Search for nuget" class="tag">nuget</a>
+                    </p>
+
+                <h2>Share</h2>
+                <p class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://nuget.org/packages/NuGet.VisualStudio/&t=Check+out+NuGet.VisualStudio+on+%23NuGet." target="_blank">
+                        <img width="24" height="24" alt="Share this package on Facebook"
+                             src="https://nuget.org/Content/gallery/img/facebook.svg"
+                                 onerror="this.src='https://nuget.org/Content/gallery/img/facebook-24x24.png'; this.onerror = null;"
+ />
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://nuget.org/packages/NuGet.VisualStudio/&text=Check+out+NuGet.VisualStudio+on+%23NuGet." target="_blank">
+                        <img width="24" height="24" alt="Tweet this package"
+                             src="https://nuget.org/Content/gallery/img/twitter.svg"
+                                 onerror="this.src='https://nuget.org/Content/gallery/img/twitter-24x24.png'; this.onerror = null;"
+ />
+                    </a>
+                </p>
+        </aside>
+    </div>
+</section>
+
+
+
+
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="footer-heading"><a href="/policies/Contact">Contact</a></span>
+                <p>
+                    Got questions about NuGet or the NuGet Gallery?
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="footer-heading"><a href="https://status.nuget.org/">Status</a></span>
+                <p>
+                    Find out the service status of NuGet.org and its related services.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="footer-heading">
+                    <a href="https://docs.microsoft.com/en-us/nuget/policies/nuget-faq">
+                        <abbr title="Frequently Asked Questions">FAQ</abbr>
+                    </a>
+                </span>
+                <p>
+                    Read the Frequently Asked Questions about NuGet and see if your question made the list.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 row-gap">
+                <img alt="" aria-hidden="true" width="184" height="57"
+                     src="/Content/gallery/img/logo-footer.svg"
+                         onerror="this.src='https://nuget.org/Content/gallery/img/logo-footer-184x57.png'; this.onerror = null;"
+ />
+            </div>
+            <div class="col-md-9 row-gap">
+                <div class="row">
+                        <div class="col-md-12 footer-release-info">
+                            <p>
+                                        &#169; Microsoft 2017 -
+                                <a href="/policies/About">About</a> -
+                                <a href="/policies/Terms">Terms of Use</a> -
+                                <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy Policy</a>
+                                    - <a href="https://www.microsoft.com/trademarks">Trademarks</a>
+                                <br />
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--
+    This is the NuGet Gallery version 4.4.4-master.
+        Deployed from 45431c3 Link: https://www.github.com/NuGet/NuGetGallery/commit/45431c3
+        Built on master Link: https://www.github.com/NuGet/NuGetGallery/tree/master
+        Built on 2017-12-14T10:16:29.0000000+00:00
+    You are on NuGetGallery_IN_2.
+-->
+
+</footer>
+
+    <script src="/Scripts/gallery/site.min.js?v=IYpyYRdW3kersiprTSZAmQVZoAorqK4rPpdxMSdwX4g1"></script>
+
+    
+
+
+    <style type="text/css">
+        #package-manager .install-script span::before {    content: "PM> "}#dotnet-cli .install-script span::before {    content: "> "}#paket-cli .install-script span::before {    content: "> "}
+    </style>
+
+    <script type="text/javascript">
+        var packageManagers = ["package-manager","dotnet-cli","paket-cli"];
+    </script>
+
+    <script src="/Scripts/gallery/page-display-package.min.js?v=1F_eYSF_dVXeHL5G0TUWVN42tUDTHen8J8tWYDvt6E41"></script>
+
+
+</body>
+</html>
