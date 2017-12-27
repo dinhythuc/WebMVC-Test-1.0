@@ -1,4 +1,5 @@
 ﻿using Models;
+using Models.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace WebMvc.Areas.Admin.Controllers
 
         //
         // GET: /Admin/ManagementStudent/Create
-
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -40,13 +41,30 @@ namespace WebMvc.Areas.Admin.Controllers
         // POST: /Admin/ManagementStudent/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(DB_Students students)
         {
             try
             {
-                // TODO: Add insert logic here
+                if(ModelState.IsValid)
+                {
+                    var model = new StudentModels();
+                    int res = model.Create(students.Student_Code, students.Student_Name,
+                                            students.Student_Class, students.Student_IdentityCard,
+                                            students.Student_Point, students.Student_Comment,
+                                            students.Student_Status, students.Student_Address,
+                                            students.Student_Born, students.Student_BirthDay,
+                                            students.Student_Parents, students.Student_Image);
+                    if (res > 0)
+                        return RedirectToAction("Index");
+                    else
+                    {
+                        ModelState.AddModelError("", "Add don't success");
+                    }
+                }
 
-                return RedirectToAction("Index");
+                return View(students);
+                
             }
             catch
             {

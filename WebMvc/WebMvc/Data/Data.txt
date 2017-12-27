@@ -1,26 +1,11 @@
 ﻿
-Home -> Index-> OnActionExecuting 	-12/22/2017 10:27:46 AM
-Home -> Index-> OnActionExecuted 	-12/22/2017 10:27:46 AM
-Home -> Index-> OnResultExecuting 	-12/22/2017 10:27:46 AM
-Home -> Index-> OnResultExecuted 	-12/22/2017 10:27:48 AM
+Home -> Index-> OnActionExecuting 	-12/26/2017 3:38:36 PM
+Home -> Index-> OnActionExecuted 	-12/26/2017 3:38:36 PM
+Home -> Index-> OnResultExecuting 	-12/26/2017 3:38:36 PM
+Home -> Index-> OnResultExecuted 	-12/26/2017 3:38:38 PM
 ------------------------------------------------------------
-Home -> Index-> OnActionExecuting 	-12/22/2017 11:44:48 AM
-Home -> Index-> OnActionExecuted 	-12/22/2017 11:44:48 AM
-Home -> Index-> OnResultExecuting 	-12/22/2017 11:44:48 AM
-Home -> Index-> OnResultExecuted 	-12/22/2017 11:44:52 AM
-------------------------------------------------------------
-Home -> Index-> OnActionExecuting 	-12/21/2017 10:58:35 PM
-Home -> Index-> OnActionExecuted 	-12/21/2017 10:58:35 PM
-Home -> Index-> OnResultExecuting 	-12/21/2017 10:58:35 PM
-Home -> Index-> OnResultExecuted 	-12/21/2017 10:58:37 PM
-------------------------------------------------------------
-Home -> Index-> OnActionExecuting 	-12/21/2017 11:11:37 PM
-Home -> Index-> OnActionExecuted 	-12/21/2017 11:11:37 PM
-Home -> Index-> OnResultExecuting 	-12/21/2017 11:11:37 PM
-Home -> Index-> OnResultExecuted 	-12/21/2017 11:11:40 PM
-------------------------------------------------------------
-Home -> Index-> OnActionExecuting 	-12/22/2017 4:19:48 PM
-Home -> Index-> OnActionExecuted 	-12/22/2017 4:19:48 PM
-Home -> Index-> OnResultExecuting 	-12/22/2017 4:19:48 PM
-Home -> Index-> OnResultExecuted 	-12/22/2017 4:19:50 PM
+Home -> Index-> OnActionExecuting 	-12/26/2017 4:06:24 PM
+Home -> Index-> OnActionExecuted 	-12/26/2017 4:06:24 PM
+Home -> Index-> OnResultExecuting 	-12/26/2017 4:06:24 PM
+Home -> Index-> OnResultExecuted 	-12/26/2017 4:06:24 PM
 ------------------------------------------------------------

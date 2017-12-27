@@ -17,10 +17,10 @@ CREATE TABLE Students(
 	Student_Status BIT,
 	Student_Address NVARCHAR(100),
 	Student_Born NVARCHAR(50),
-	Student_IdentityCard INT,
+	Student_IdentityCard INT UNIQUE,
 	Student_BirthDay DATETIME,
 	Student_Parents NVARCHAR(50),
-	PRIMARY KEY (Student_Code, Student_IdentityCard)
+	PRIMARY KEY (Student_Code)
 );
 
 
@@ -86,3 +86,34 @@ CREATE PROC Students_ListAll
 AS
 SELECT * FROM Students WHERE Student_Status=1
 ORDER BY Student_ID ASC
+
+CREATE PROC Student_Insert
+	@StudentCode NVARCHAR(30),
+	@StudentName NVARCHAR(100),
+	@StudentClass NVARCHAR(10),
+	@StudentPoint FLOAT,
+	@StudentComment NVARCHAR(500),
+	@StudentStatus BIT,
+	@StudentAddress NVARCHAR(100),
+	@StudentBorn NVARCHAR(50),
+	@StudentIdentityCard INT,
+	@StudentBirthDay DATETIME,
+	@StudentParents NVARCHAR(50),
+	@StudentImage NVARCHAR(250)
+AS
+BEGIN
+	INSERT INTO Students(Student_Code, Student_Name, 
+						Student_Class, Student_Point, 
+						Student_Comment, Student_Status, 
+						Student_Address, Student_Born, 
+						Student_IdentityCard, Student_BirthDay, 
+						Student_Parents, Student_Image)
+			VALUES(@StudentCode, @StudentName, 
+					@StudentClass, @StudentPoint,
+					@StudentComment, @StudentStatus,
+					@StudentAddress, @StudentBorn,
+					@StudentIdentityCard, @StudentBirthDay,
+					@StudentParents, @StudentImage)
+END 
+GO
+
