@@ -1,54 +1,35 @@
 ﻿@model IEnumerable<WebMvc.Models.Student>
-@*@{
-    var date = DateTime.Now.ToShortDateString();
-    string message = "Wellcome";
-    <text>Today's date is:</text>@date<br />
-    @message  
-}
 
-@if (DateTime.IsLeapYear(DateTime.Now.Year))
-{
-    @DateTime.Now.Year @:is a leap year.
-}
-else{
-    @DateTime.Now.Year @:is not leap year.
-}
-
-@for (int i = 0; i < 5; i++)
-{
-    @i.ToString()<br />
-}*@
-
-
- <div style="margin-left: 5.5%" class="container">
-     <table class="w3-table w3-striped w3-bordered " style="width: 50%">
+<div style="margin-left: 5.5%" class="container">
+    <table class="w3-table w3-striped w3-bordered " style="width: 50%">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.StudentName)</th>
+            <th>@Html.DisplayNameFor(model => model.Age)</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>@Html.DisplayNameFor(model=> model.StudentName)</th>
-                <th>@Html.DisplayNameFor(model=> model.Age)</th>
-                <th></th>
+                <td>@Html.DisplayFor(modelitem => item.StudentName)</td>
+                <td>@Html.DisplayFor(modelitem => item.Age)</td>
+                <td>
+                    <a href="~/Home/Edit?StudentID=@item.StudentID" class="btn btn-primary">Edit</a>|
+                     @Html.ActionLink("Details", "Details", new { id = item.StudentID })|
+                     @Html.ActionLink("Delete", "Delete", new { id = item.StudentID })
+                </td>
             </tr>
-            @foreach (var item in Model)
-            {
-             <tr>
-                 <td>@Html.DisplayFor(modelitem=>item.StudentName)</td>
-                 <td>@Html.DisplayFor(modelitem=>item.Age)</td>
-                 <td>
-                     <a href="~/Home/Edit?StudentID=@item.StudentID" class="btn btn-primary">Edit</a>|
-                     @Html.ActionLink("Details", "Details", new {id = item.StudentID})|
-                     @Html.ActionLink("Delete", "Delete", new {id = item.StudentID})
-                 </td>
-             </tr>
-            }
-        </table>
- </div>
-        
+        }
+    </table>
 
-@*<ul>
-    @foreach(var std in ViewData["Students"] as IList<WebMvc.Models.Student>)
-    {
-        <li>
-            @std.StudentName
-        </li>
-        
-    }
-</ul>*@
+    <div class="content">
+        <h3>Sticky Navigation Example</h3>
+        <p>The navbar will stick to the top when you reach its scroll position.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
+</div>

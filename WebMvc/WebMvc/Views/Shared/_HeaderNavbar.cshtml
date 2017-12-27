@@ -1,23 +1,38 @@
 ﻿@{
     Layout = null;
 }
-<ul>
-   <li>@Html.ActionLink("Home", "Index", "Home")</li>
-   <li>@Html.ActionLink("About", "About", "Home")</li>
-   <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-</ul>
 
-@*<div>
-  <ul>
-    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-    <li>@Html.ActionLink("About", "About", "Home")</li>
-    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-  </ul>
-</div>*@
+<div class="topnav" id="myTopnav">
+   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+   @Html.ActionLink("Home", "Index", "Home")
+   @Html.ActionLink("About", "About", "Home")
+   @Html.ActionLink("Contact", "Contact", "Home")
+   
+</div>
 
-@*<div id="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div>*@
+<script>
+    var x = document.getElementById("myTopnav");
+    function myFunction() {
+        
+        if (x.className === "topnav") {
+            x.className += " responsive";            
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    //window.onscroll = function () { myFunction() };
+
+    //var sticky = myTopnav.offsetTop;
+
+    //function myFunction() {
+    //    if (window.pageYOffset >= sticky) {
+    //        navbar.classList.add("sticky")
+    //    } else {
+    //        navbar.classList.remove("sticky");
+    //    }
+    //}
+</script>
+<br />
+
 

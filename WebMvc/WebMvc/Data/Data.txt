@@ -1,11 +1,1 @@
 ﻿
-Home -> Index-> OnActionExecuting 	-12/26/2017 3:38:36 PM
-Home -> Index-> OnActionExecuted 	-12/26/2017 3:38:36 PM
-Home -> Index-> OnResultExecuting 	-12/26/2017 3:38:36 PM
-Home -> Index-> OnResultExecuted 	-12/26/2017 3:38:38 PM
-------------------------------------------------------------
-Home -> Index-> OnActionExecuting 	-12/26/2017 4:06:24 PM
-Home -> Index-> OnActionExecuted 	-12/26/2017 4:06:24 PM
-Home -> Index-> OnResultExecuting 	-12/26/2017 4:06:24 PM
-Home -> Index-> OnResultExecuted 	-12/26/2017 4:06:24 PM
-------------------------------------------------------------

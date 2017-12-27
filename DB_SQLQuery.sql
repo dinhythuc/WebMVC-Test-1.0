@@ -23,14 +23,6 @@ CREATE TABLE Students(
 	PRIMARY KEY (Student_Code)
 );
 
-
----------------------ALTER---------------------------------------------------
-ALTER TABLE Students ADD Student_Image NVARCHAR(250)
---ALTER TABLE Students ADD PRIMARY KEY (Student_Code, Student_IdentityCard);
-
-ALTER TABLE Students ADD CONSTRAINT Student_FK_ID_Class FOREIGN KEY (Student_Class) REFERENCES Class(Class_ID)
-
-
 CREATE TABLE Class(
 	Class_ID NVARCHAR(10) PRIMARY KEY,
 	Class_NumberOfStudents INT,
@@ -38,6 +30,15 @@ CREATE TABLE Class(
 	Class_Status BIT,
 	Class_Comment NVARCHAR(500)
 );
+
+CREATE TABLE Category(
+	
+);
+---------------------ALTER---------------------------------------------------
+ALTER TABLE Students ADD Student_Image NVARCHAR(250)
+--ALTER TABLE Students ADD PRIMARY KEY (Student_Code, Student_IdentityCard);
+
+ALTER TABLE Students ADD CONSTRAINT Student_FK_ID_Class FOREIGN KEY (Student_Class) REFERENCES Class(Class_ID)
 
 DROP TABLE Class
 DROP TABLE Students
